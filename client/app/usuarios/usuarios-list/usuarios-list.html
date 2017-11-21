@@ -1,0 +1,38 @@
+empleados<section class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <table  class="table table-bordered table-hover">
+        <thead class="thead-inverse">
+          <tr>
+              <th class="text-center text-uppercase">Nombres</th><!--columnas en una tabla -->
+              <th class="text-center text-uppercase">Apellidos</th>
+              <th class="text-center text-uppercase"># Documento</th>
+              <th class="text-center text-uppercase">Telefono</th><!--columnas en una tabla-->
+              <th class="text-center text-uppercase">Direccion</th>
+              <th class="text-center text-uppercase">Email</th>
+              <th class="text-center text-uppercase">Movil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in vm.usuarios">
+            <td class="text-center">{{ item.nombres}}</td>
+            <td class="text-center">{{ item.apellidos}}</td>
+            <td class="text-center">{{ item.numDocumento}}</td>
+            <td class="text-center">{{ item.telefono}}</td>
+            <td class="text-center">{{ item.direccion}}</td>
+            <td class="text-center">{{ item.email}}</td>
+            <td class="text-center">{{ item.movil}}</td>
+
+          </tr>
+
+
+          <h4>
+              Total de empleados: {{vm.usuarios.length}}
+          </h4>
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</section>

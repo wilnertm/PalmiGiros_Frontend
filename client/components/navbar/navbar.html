@@ -1,0 +1,48 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">MundoNet</a>
+    </div>
+    <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown" ui-sref-active="active">
+          <a href="#" ng-show="vm.AuthService.isAuthenticated()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giros <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="giros-create">Realizar Giros</a></li>
+            <li><a href="giros-list">Recibir Giros</a></li>
+          </ul>
+          <li class="dropdown" ui-sref-active="active">
+            <a  ng-show="vm.AuthService.isAuthenticated()" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="usuarios-create">Registro Empleados</a></li>
+              <li><a href="clientes-create">Registro Clientes</a></li>
+            </ul>
+          </li>
+          <li class="dropdown" ui-sref-active="active">
+            <a  href="#" ng-show="vm.AuthService.isAuthenticated()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="usuarios-list">Listar Empleados</a></li>
+              <li><a href="clientes-list">Listar Clientes</a></li>
+            </ul>
+          </li>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+          <a ng-show="!vm.AuthService.isAuthenticated()" href="login">Login</a>
+          <a ng-show="vm.AuthService.isAuthenticated()"  ng-click="vm.AuthService.logout()" href="login">Salir</a>
+        </li>
+        <!-- <li class="Header-button" ng-show="vm.AuthService.isAuthenticated()">
+            <a ng-click="vm.AuthService.logout()" href="#">Salir</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</div>

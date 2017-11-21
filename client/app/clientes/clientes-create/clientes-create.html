@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-md-6 col-md-offset-3">
+              <h3 class="text-center">Registro De Clientes</h3>
+              <form class="" ng-submit="vm.crearCliente()">
+                <div class="form-group">
+                  <input type="text" name="" style="margin: 0.5em .2em;" class="form-control text-center" placeholder="Nombres" ng-model="vm.clientes.nombres" value="">
+                  <input type="text" name="" style="margin: 0.5em .2em;" class="form-control text-center" placeholder="Apellidos" ng-model="vm.clientes.apellidos" value="">
+                  <input type="text" name="" style="margin: 0.5em .2em;" class="form-control text-center" placeholder="# Documento" ng-model="vm.clientes.numeroDocumento" value="">
+                  <input type="text" name="" style="margin: 0.5em .2em;" class="form-control text-center" placeholder="# Telefono" ng-model="vm.clientes.telefono" value="">
+                  <select class="form-control text-center" name="" ng-model="vm.clientes.idCiudad.id">
+                    <option class="text-center" value="">Ciudad</option>
+                    <option ng-value = "item.id" ng-repeat="item in vm.ciudades"> {{item.ciudad}} </option>
+                  </select>
+                  <button type="submit" class="btn btn-primary btn-block" name="button">Registrar</button>
+                </div>
+              </form>
+              {{vm.clientes}}
+            </div>
+        </div>
+    </div>
+</section>
